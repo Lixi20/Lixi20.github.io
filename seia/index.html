@@ -973,6 +973,18 @@ p { margin-bottom: 1.25rem; }
 <li><a href="#_api命名规范">10.6. API命名规范</a></li>
 </ul>
 </li>
+<li><a href="#_DaimaTongshi_chapter">11. 代码设计（通识）</a>
+<ul class="sectlevel2">
+<li><a href="#_本源">11.1. 本源</a></li>
+<li><a href="#_编程的本源">11.2. 编程的本源</a></li>
+<li><a href="#_工具的作用">11.3. 工具的作用</a>
+<ul class="sectlevel3">
+<li><a href="#_程序是怎样提高效率的">11.3.1. 程序是怎样提高效率的？</a></li>
+</ul>
+</li>
+<li><a href="#_怎样设计程序无限贴近工具的特质">11.4. 怎样设计程序无限贴近工具的特质？</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -3650,10 +3662,138 @@ HTTP Request它会产生这个对象哈。然后这个时候，因为你是程�
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_DaimaTongshi_chapter">11. 代码设计（通识）</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_本源">11.1. 本源</h3>
+<div class="paragraph">
+<p>本源是什么？我们拆开一个字一个字地看。</p>
+</div>
+<div class="paragraph">
+<p>首先本字就代表着：本来、本质（目的）字面意思就是指的：</p>
+</div>
+<div class="paragraph">
+<p>事物本身所固有的根本属性，它对事物的性质、状况和发展起决定作用。</p>
+</div>
+<div class="paragraph">
+<p>而源字代表着：源头，比喻事物的开始部分。</p>
+</div>
+<div class="paragraph">
+<p>看得出来，本和源存在着因果关系，当你有了源才会得到最后本，也就是有人源头才会得到最后的结果，这个结果也可以说是本质。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_编程的本源">11.2. 编程的本源</h3>
+<div class="paragraph">
+<p>那么编程的本源是什么呢？</p>
+</div>
+<div class="paragraph">
+<p>上面说的本代表着本质、目的，它们对应到程序这里简单来说就是结果。</p>
+</div>
+<div class="paragraph">
+<p>而源代表的是源头，在编程方面就是起因。</p>
+</div>
+<div class="paragraph">
+<p>之前讲过编程是个动词，而动词一般形容的是人或事物的动作，动作都会带上工具，那么这样可以说程序就是工具。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_工具的作用">11.3. 工具的作用</h3>
+<div class="paragraph">
+<p>首先工具是指能够方便人们完成工作的器具，它的好处可以是机械性，也可以是智能性的，但这是字面上的意思，在日常生活中，我们使用工具，比如说：用斧头砍柴、用水桶提水、用通道传递东西，在这些例子里面，斧头、水桶、通达都是工具，它们都能方便人们完成工作，这也是工具的主要作用之一，那么还有一点是啥？</p>
+</div>
+<div class="paragraph">
+<p>上面说的用斧头砍柴、用水桶提水等等都是靠得工具，那要是这些工具没发明之前人们是怎么生活的？为什么要发明这些？</p>
+</div>
+<div class="paragraph">
+<p>在很早之前，人们需要取火，用来保暖和加工食物，这时候的火源就来源于地上拾取的木头或者树叶，但是那时候没有斧头，木头都是特别粗的，然后发现在火烧完后，那根特别粗的木头不会烧到中心不分，可能外面都化成灰了，但是中间还是完好的摸样，所以人们就想怎么才能把木头分成一小根一小根的，这样能更方便燃烧，这时候不能可能用手直接掰开呀，为什么？第一没有足够的力气，第二强行掰开的话，手会磨损、受伤，这时人们就想有什么有什么东西能代替手，而且要比手更锋利。</p>
+</div>
+<div class="paragraph">
+<p>最初的斧头就出现了，人们发现地上的石头有一些是扁平形状的，如果把石头的一端磨的很锋利，就能基本的割开一些东西，也包括木头。</p>
+</div>
+<div class="paragraph">
+<p>所以得出的结论就是斧头、水桶等等这些工具都是为了服务人类而发明的，而且还能帮助人类提高劳动的效率，那么偷换概念，程序也是工具，那么程序的诞生一定也是为人类服务而且提高人类做事的效率。</p>
+</div>
+<div class="sect3">
+<h4 id="_程序是怎样提高效率的">11.3.1. 程序是怎样提高效率的？</h4>
+<div class="paragraph">
+<p>那么程序是怎么提高人类做事的效率呢？</p>
+</div>
+<div class="paragraph">
+<p>1.重复（算法）</p>
+</div>
+<div class="paragraph">
+<p>在编程中，算法占据了很重要的部分，而某些结构里，如果有两个点的功能目标相同，编程可以让算法成为一个函数，从而达到重复使用，而不是遇见一次就重新写一次。</p>
+</div>
+<div class="paragraph">
+<p>2.速度快</p>
+</div>
+<div class="paragraph">
+<p>速度快顾名思义程序是部署在计算机上的，而计算机的速度是很快的，强大的CPU能够让它做出每秒几亿次运算。</p>
+</div>
+<div class="paragraph">
+<p>3.稳定、可靠</p>
+</div>
+<div class="paragraph">
+<p>编程相比人来说，它的整个运行规律，逻辑都是人类编写的，它不会像人类做事情做到一半，然后突然冒出什么事来打扰到它工作，从而产生很不好的结果，而且它们能做到这些功能之前都是经过测试的，很大程度上减少了出错的概率。</p>
+</div>
+<div class="paragraph">
+<p>4.模块化</p>
+</div>
+<div class="paragraph">
+<p>这里指的是编程将整个程序的代码分成更小的结构，从而促进大型软件和系统的建构，这样会大大的节约成本，以及避免重复创造。</p>
+</div>
+<div class="paragraph">
+<p>5.持续输出</p>
+</div>
+<div class="paragraph">
+<p>程序相比于人类来说，他不需要睡眠、不需要吃东西补充体力，也不知道什么是睡眠，他就能每天24小时不间断的运行，如果人类不停的思考计算，身体肯定撑不住，不允许这么超负载的运行。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_怎样设计程序无限贴近工具的特质">11.4. 怎样设计程序无限贴近工具的特质？</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>算法高效：简单，复用，逻辑清晰。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>举例子：</p>
+</div>
+<div class="paragraph">
+<p>SQL慢的原因：相关性弱，复杂(逻辑)、查询多、行多，结果集数量多。</p>
+</div>
+<div class="paragraph">
+<p>API————迟（网络延迟）：域名（错误的DNS会使请求的时候绕大半个地球才请求到服务器），响应慢。</p>
+</div>
+<div class="paragraph">
+<p>代码慢：一个程序里面的代码全是Static Class，一点运行要跑半天才能运行起来。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>处理异常无bug：处理好代码中的异常问题，最后运行的时候不能有bug出现。</p>
+</li>
+<li>
+<p>运行更快：高效的算法逻辑写出来无异常无bug的程序能够很快的跑起来，而且会持续输出。</p>
+</li>
+<li>
+<p>更合适的模块封装：将每个模块的拆分的很细，就能很清楚的知道每个模块怎么做，该做什么，再进行封装，达到代码复用的地步。</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-08-20 10:47:40 +0800
+Last updated 2021-08-21 14:23:54 +0800
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
