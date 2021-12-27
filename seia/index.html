@@ -1552,6 +1552,30 @@ p { margin-bottom: 1.25rem; }
 <li><a href="#_终端上面cpu100测试">41.7. 终端上面CPU100%测试</a></li>
 </ul>
 </li>
+<li><a href="#_121918_chapter">42. 2021-12-18 录课资料</a>
+<ul class="sectlevel2">
+<li><a href="#_默认字母和数字排序方法">42.1. 默认字母和数字排序方法</a></li>
+<li><a href="#_git_diff_查看修改的地方">42.2. <code>git diff</code> 查看修改的地方</a></li>
+<li><a href="#_翻译小妙招">42.3. 翻译小妙招</a></li>
+<li><a href="#_减少代码读取文件的次数">42.4. 减少代码读取文件的次数</a></li>
+<li><a href="#_进制转换">42.5. 进制转换</a></li>
+</ul>
+</li>
+<li><a href="#_1225_chapter">43. 2021-12-25 录课资料</a>
+<ul class="sectlevel2">
+<li><a href="#_rust">43.1. Rust</a>
+<ul class="sectlevel3">
+<li><a href="#_指针引用">43.1.1. 指针（引用&amp;）</a></li>
+</ul>
+</li>
+<li><a href="#_linux_2">43.2. Linux</a>
+<ul class="sectlevel3">
+<li><a href="#_命令">43.2.1. 命令</a></li>
+<li><a href="#_内核">43.2.2. 内核</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -12441,10 +12465,295 @@ locate XXX 查找文件路径</pre>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_121918_chapter">42. 2021-12-18 录课资料</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_默认字母和数字排序方法">42.1. 默认字母和数字排序方法</h3>
+<div class="paragraph">
+<p><code>sort</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sort.png" alt="sort">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_git_diff_查看修改的地方">42.2. <code>git diff</code> 查看修改的地方</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/diff.png" alt="diff">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_翻译小妙招">42.3. 翻译小妙招</h3>
+<div class="paragraph">
+<p><code>y</code> 不加换行会以单词的形式挨个翻译</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/翻译1.png" alt="翻译1">
+</div>
+</div>
+<div class="paragraph">
+<p><code>y</code> 加换行会翻译整句话</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/翻译2.png" alt="翻译2">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_减少代码读取文件的次数">42.4. 减少代码读取文件的次数</h3>
+<div class="paragraph">
+<p>可以在代码里面赋一个变量。</p>
+</div>
+<div class="paragraph">
+<p>当以后写了100个模块，每个模块都至少能读100此文件，就算这个文件再小，你读它也要消耗打开跟读取的时间。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_进制转换">42.5. 进制转换</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/进制.png" alt="进制">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1225_chapter">43. 2021-12-25 录课资料</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_rust">43.1. Rust</h3>
+<div class="paragraph">
+<p>01:01:00</p>
+</div>
+<div class="paragraph">
+<p>&amp;str 相比 String更省内存，因为&amp;str没有实现Copy</p>
+</div>
+<div class="sect3">
+<h4 id="_指针引用">43.1.1. 指针（引用&amp;）</h4>
+<div class="paragraph">
+<p>举个例子：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>a = "OK"
+
+b = a
+
+pring(b) -&gt; OK</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>//假设a的内存地址为0x00001
+a = "OK"
+
+b = &amp;a -&gt; b= 0x00001
+
+a = "OK2"
+
+pring(b) -&gt; "OK2"</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>a = "OK"
+
+b = a -&gt;"OK" //变量永远在做等价替换，从内存上来说就分了两块内存
+
+a = "OK2"
+
+pring(b) -&gt; "OK"</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>eprintln!("xxxxx"); 错误输出</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_linux_2">43.2. Linux</h3>
+<div class="paragraph">
+<p>为什么我们CPU Modle采集的数据和TOP有些许不一至？因为是不同的时序启动的</p>
+</div>
+<div class="sect3">
+<h4 id="_命令">43.2.1. 命令</h4>
+<div class="listingblock">
+<div class="content">
+<pre>ls `pwd`/*  现实绝对路径
+
+|| 管道和退出代码有关
+
+ls 1&gt;1.log 标准输出至1.log
+ls 2&gt;1.log 标准错误至1.log</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_内核">43.2.2. 内核</h4>
+<div class="paragraph">
+<p>No such file or directory (os error 2)是操作系统打出来的</p>
+</div>
+<div class="paragraph">
+<p>可以使用errno -l 命令查看:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>EPERM 1 Operation not permitted
+ENOENT 2 No such file or directory
+ESRCH 3 No such process
+EINTR 4 Interrupted system call
+EIO 5 Input/output error
+ENXIO 6 No such device or address
+E2BIG 7 Argument list too long
+ENOEXEC 8 Exec format error
+EBADF 9 Bad file descriptor
+ECHILD 10 No child processes
+EAGAIN 11 Resource temporarily unavailable
+ENOMEM 12 Cannot allocate memory
+EACCES 13 Permission denied
+EFAULT 14 Bad address
+ENOTBLK 15 Block device required
+EBUSY 16 Device or resource busy
+EEXIST 17 File exists
+EXDEV 18 Invalid cross-device link
+ENODEV 19 No such device
+ENOTDIR 20 Not a directory
+EISDIR 21 Is a directory
+EINVAL 22 Invalid argument
+ENFILE 23 Too many open files in system
+EMFILE 24 Too many open files
+ENOTTY 25 Inappropriate ioctl for device
+ETXTBSY 26 Text file busy
+EFBIG 27 File too large
+ENOSPC 28 No space left on device
+ESPIPE 29 Illegal seek
+EROFS 30 Read-only file system
+EMLINK 31 Too many links
+EPIPE 32 Broken pipe
+EDOM 33 Numerical argument out of domain
+ERANGE 34 Numerical result out of range
+EDEADLK 35 Resource deadlock avoided
+ENAMETOOLONG 36 File name too long
+ENOLCK 37 No locks available
+ENOSYS 38 Function not implemented
+ENOTEMPTY 39 Directory not empty
+ELOOP 40 Too many levels of symbolic links
+EWOULDBLOCK 11 Resource temporarily unavailable
+ENOMSG 42 No message of desired type
+EIDRM 43 Identifier removed
+ECHRNG 44 Channel number out of range
+EL2NSYNC 45 Level 2 not synchronized
+EL3HLT 46 Level 3 halted
+EL3RST 47 Level 3 reset
+ELNRNG 48 Link number out of range
+EUNATCH 49 Protocol driver not attached
+ENOCSI 50 No CSI structure available
+EL2HLT 51 Level 2 halted
+EBADE 52 Invalid exchange
+EBADR 53 Invalid request descriptor
+EXFULL 54 Exchange full
+ENOANO 55 No anode
+EBADRQC 56 Invalid request code
+EBADSLT 57 Invalid slot
+EDEADLOCK 35 Resource deadlock avoided
+EBFONT 59 Bad font file format
+ENOSTR 60 Device not a stream
+ENODATA 61 No data available
+ETIME 62 Timer expired
+ENOSR 63 Out of streams resources
+ENONET 64 Machine is not on the network
+ENOPKG 65 Package not installed
+EREMOTE 66 Object is remote
+ENOLINK 67 Link has been severed
+EADV 68 Advertise error
+ESRMNT 69 Srmount error
+ECOMM 70 Communication error on send
+EPROTO 71 Protocol error
+EMULTIHOP 72 Multihop attempted
+EDOTDOT 73 RFS specific error
+EBADMSG 74 Bad message
+EOVERFLOW 75 Value too large for defined data type
+ENOTUNIQ 76 Name not unique on network
+EBADFD 77 File descriptor in bad state
+EREMCHG 78 Remote address changed
+ELIBACC 79 Can not access a needed shared library
+ELIBBAD 80 Accessing a corrupted shared library
+ELIBSCN 81 .lib section in a.out corrupted
+ELIBMAX 82 Attempting to link in too many shared libraries
+ELIBEXEC 83 Cannot exec a shared library directly
+EILSEQ 84 Invalid or incomplete multibyte or wide character
+ERESTART 85 Interrupted system call should be restarted
+ESTRPIPE 86 Streams pipe error
+EUSERS 87 Too many users
+ENOTSOCK 88 Socket operation on non-socket
+EDESTADDRREQ 89 Destination address required
+EMSGSIZE 90 Message too long
+EPROTOTYPE 91 Protocol wrong type for socket
+ENOPROTOOPT 92 Protocol not available
+EPROTONOSUPPORT 93 Protocol not supported
+ESOCKTNOSUPPORT 94 Socket type not supported
+EOPNOTSUPP 95 Operation not supported
+EPFNOSUPPORT 96 Protocol family not supported
+EAFNOSUPPORT 97 Address family not supported by protocol
+EADDRINUSE 98 Address already in use
+EADDRNOTAVAIL 99 Cannot assign requested address
+ENETDOWN 100 Network is down
+ENETUNREACH 101 Network is unreachable
+ENETRESET 102 Network dropped connection on reset
+ECONNABORTED 103 Software caused connection abort
+ECONNRESET 104 Connection reset by peer
+ENOBUFS 105 No buffer space available
+EISCONN 106 Transport endpoint is already connected
+ENOTCONN 107 Transport endpoint is not connected
+ESHUTDOWN 108 Cannot send after transport endpoint shutdown
+ETOOMANYREFS 109 Too many references: cannot splice
+ETIMEDOUT 110 Connection timed out
+ECONNREFUSED 111 Connection refused
+EHOSTDOWN 112 Host is down
+EHOSTUNREACH 113 No route to host
+EALREADY 114 Operation already in progress
+EINPROGRESS 115 Operation now in progress
+ESTALE 116 Stale file handle
+EUCLEAN 117 Structure needs cleaning
+ENOTNAM 118 Not a XENIX named type file
+ENAVAIL 119 No XENIX semaphores available
+EISNAM 120 Is a named type file
+EREMOTEIO 121 Remote I/O error
+EDQUOT 122 Disk quota exceeded
+ENOMEDIUM 123 No medium found
+EMEDIUMTYPE 124 Wrong medium type
+ECANCELED 125 Operation canceled
+ENOKEY 126 Required key not available
+EKEYEXPIRED 127 Key has expired
+EKEYREVOKED 128 Key has been revoked
+EKEYREJECTED 129 Key was rejected by service
+EOWNERDEAD 130 Owner died
+ENOTRECOVERABLE 131 State not recoverable
+ERFKILL 132 Operation not possible due to RF-kill
+EHWPOISON 133 Memory page has hardware error
+ENOTSUP 95 Operation not supported</pre>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-12-13 18:38:49 +0800
+Last updated 2021-12-27 18:38:23 +0800
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
