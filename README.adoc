@@ -1,13 +1,13 @@
-= Lixi20.github.io
+= yolollx.github.io
 
-Lixi20's Blog. Composed in AsciiDoc.
+yolollx's Blog. Composed in AsciiDoc.
 
 == Online Doc
 
 === C03
 
-https://lixi20.github.io/GeekCampC03/
+https://yolollx.github.io/GeekCampC03/
 
 === FSE
 
-https://lixi20.github.io/FSE/
+https://yolollx.github.io/FSE/
